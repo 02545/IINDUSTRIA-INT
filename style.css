@@ -1,0 +1,47 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background-color: #1e3a8a;
+  color: #4fc3f7;
+
+  /* 🔹 Fondo con imagen */
+  background-image: url('fondo.jpg'); /* Asegúrate de que el archivo esté en la misma carpeta */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+
+/* 🔹 Encabezado en línea: imagen + título */
+header.encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  text-align: left;
+  flex-wrap: wrap;
+}
+
+/* Imagen del encabezado adaptada para posición en línea */
+.imagen-encabezado {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  margin: 0;
+  box-shadow: 0 0 20px #00bcd4;
+}
+
+/* Contenedor del texto dentro del encabezado */
+header.encabezado h1 {
+  margin: 0;
+  font-size: 2.5em;
+  color: #00bcd4;
+}
+
+header.encabezado p {
+  margin: 10px 0 0;
+  color: #e0e0e0;
+}
+.texto-encabezado p {
+  margin-top: 20px;
+}
