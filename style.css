@@ -45,3 +45,28 @@ header.encabezado p {
 .texto-encabezado p {
   margin-top: 20px;
 }
+/* 🔹 Centrando el menú de navegación */
+nav {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #4fc3f7;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffffff;
+}
+
