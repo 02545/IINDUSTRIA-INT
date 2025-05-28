@@ -2,16 +2,24 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   background-color: #1e3a8a;
-  color: #4fc3f7;
+  color: white;
 
-  /* 🔹 Fondo con imagen */
-  background-image: url('fondo.jpg'); /* Asegúrate de que el archivo esté en la misma carpeta */
+  background-image: url('fondo.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+  font-size: 12px; /* Tamaño de texto general */
+  line-height: 1.5;
 }
 
-/* 🔹 Encabezado en línea: imagen + título */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Arial', sans-serif';
+  color: white;
+  margin: 0.5em 0;
+}
+
+
+/* Encabezado en línea: imagen + título */
 header.encabezado {
   display: flex;
   align-items: center;
@@ -21,7 +29,6 @@ header.encabezado {
   flex-wrap: wrap;
 }
 
-/* Imagen del encabezado adaptada para posición en línea */
 .imagen-encabezado {
   width: 150px;
   height: auto;
@@ -30,23 +37,26 @@ header.encabezado {
   box-shadow: 0 0 20px #00bcd4;
 }
 
-/* Contenedor del texto dentro del encabezado */
-header.encabezado h1 {
-  margin: 0;
-  font-size: 5gem;
+header.encabezado h1.titulo-principal {
+  font-size: 4em;
   color: #00bcd4;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  margin: 0;
 }
+
 
 header.encabezado p {
   margin: 10px 0 0;
-  color: #e0e0e0;
+  color: white;
 }
 
 .texto-encabezado p {
-  margin-top: 20px;
+  margin-top: 40px;
+  color: white;
 }
 
-/* 🔹 Centrando el menú de navegación */
+/* Menú de navegación centrado y adaptable */
 nav {
   display: flex;
   justify-content: center;
@@ -58,13 +68,16 @@ nav ul {
   padding: 0;
   display: flex;
   gap: 30px;
+  flex-wrap: wrap; /* Botones a otra línea si no caben */
+  justify-content: center;
 }
 
-/* 🔹 Enlaces con recuadro */
 nav ul li a {
   text-decoration: none;
-  color: #4fc3f7;
+  color: white;
   font-weight: bold;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
   padding: 10px 20px;
   border: 2px solid #4fc3f7;
   border-radius: 10px;
@@ -77,34 +90,19 @@ nav ul li a:hover {
   background-color: #4fc3f7;
   border-color: white;
 }
-footer.contacto {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #e0e0e0;
-  padding: 20px;
-  text-align: center;
-  border-top: 2px solid #4fc3f7;
-}
 
-footer.contacto a {
-  color: #4fc3f7;
-  text-decoration: none;
-}
-
-footer.contacto a:hover {
-  text-decoration: underline;
-  color: white;
-}
+/* Galería de imágenes centrada */
 .galeria {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Centra las imágenes horizontalmente */
+  justify-content: center;
   gap: 30px;
   padding: 20px 0;
 }
 
 .galeria figure {
   margin: 0;
-  text-align: center; /* Centra el figcaption debajo de la imagen */
+  text-align: center;
 }
 
 .galeria img {
@@ -122,16 +120,35 @@ footer.contacto a:hover {
 
 .galeria figcaption {
   margin-top: 10px;
-  color: #e0e0e0;
-  font-size: 0.9em;
-}
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap; /* Permite que los elementos se muevan a otra línea */
-  justify-content: center;
+  color: white;
+  font-size: 12px;
 }
 
+/* Footer con texto blanco */
+footer.contacto {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-top: 2px solid #4fc3f7;
+  font-size: 12px;
+}
+
+footer.contacto a {
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+footer.contacto a:hover {
+  text-decoration: underline;
+  color: #4fc3f7;
+}
+
+.titulo-principal {
+  color: #00bcd4;
+  font-size: 7em; /* Aumenta este valor para hacerlo más grande */
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}
 
