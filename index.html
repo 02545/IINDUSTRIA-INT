@@ -5,15 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TINACO INTELIGENTE - Unidad Anterior</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Centrar las imágenes de la galería */
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; /* Centra horizontalmente */
+      gap: 30px;
+      padding: 20px 0;
+    }
+
+    .galeria figure {
+      margin: 0;
+      text-align: center;
+    }
+
+    .galeria img {
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 188, 212, 0.5);
+      transition: transform 0.3s ease;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    .galeria figcaption {
+      margin-top: 10px;
+      color: #e0e0e0;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
 
   <header class="encabezado">
     <img src="encabezado.png" alt="Imagen del proyecto" class="imagen-encabezado">
     <div class="texto-encabezado">
-      <h1 >TINACO INTELIGENTE</h1>
+      <h1>TINACO INTELIGENTE</h1>
       <p style="margin-top: 20px;">Presentación del proyecto realizado en la unidad anterior del curso de Industria Inteligente.</p>
-
     </div>
   </header>
 
@@ -30,21 +63,37 @@
     <section id="descripcion">
       <h2>Descripción del Proyecto</h2>
       <p>Este proyecto consistió en una maqueta interactiva sobre un Tinaco colocando sensores para saber el llenado y vacío de este mismo, al igual saber el nivel de agua, se integro el circuito con Labview y ardiuno </p>
+      <h2>Conexión entre LabVIEW y Arduino</h2>
+
+      <p>La conexión entre LabVIEW y Arduino permite integrar el poder visual y de análisis de datos de LabVIEW con el control físico de sensores y actuadores que ofrece el Arduino. Esto es muy útil en automatización, adquisición de datos, prototipos de ingeniería y proyectos educativos.</p>
+
+      <p>¿Cómo se realiza la conexión?</p>
+      <p> Uso de una librería especial – LINX:
+        Para que LabVIEW pueda comunicarse con Arduino, se utiliza una librería llamada LINX, desarrollada por Digilent. LINX actúa como puente entre ambos, permitiendo que LabVIEW controle el Arduino mediante comunicación serial (generalmente por USB).
+      </p>
+
+      <p>Carga de firmware en Arduino:</p>
+      <p>Antes de usar LabVIEW con Arduino, se debe cargar un firmware especial al Arduino (también proporcionado por LINX). Este firmware convierte al Arduino en un "esclavo" que ejecuta comandos enviados desde LabVIEW, como leer una entrada digital, enviar datos de un sensor, o activar una salida.</p>
+
+      <p>Comunicación Serial (USB):</p>
+      <p>Una vez cargado el firmware, Arduino y LabVIEW se comunican a través del puerto serial (COM). LabVIEW envía instrucciones (por ejemplo, encender un LED), y Arduino responde ejecutándolas o devolviendo datos (como el valor de un sensor).</p>
+
+      <p> Interfaz gráfica en LabVIEW:</p>
+      <p> En LabVIEW, se crea una interfaz gráfica de usuario (GUI) que permite al usuario interactuar fácilmente con el Arduino, sin necesidad de modificar el código del microcontrolador. Esta interfaz puede mostrar gráficas, botones, controles de temperatura, nivel, velocidad, etc.</p>
     </section>
 
     <section id="galeria">
       <h2>Galería de Imágenes</h2>
-       <p>La casa se realizo en Solidworks.</p>
+      <p>La casa se realizo en Solidworks.</p>
       <div class="galeria">
         <figure>
           <img src="sol.jpeg" alt="Maqueta del Sol">
           <figcaption>Esquema de casa </figcaption>
         </figure>
-         <figure>
+        <figure>
           <img src="imagen1.jpeg" alt="Maqueta del Sol">
           <figcaption> Implementando Volumen </figcaption>
         </figure>
-         
         <figure>
           <img src="planetas.jpeg" alt="Planetas girando">
           <figcaption>Simulación en LabView del programa.</figcaption>
@@ -61,8 +110,6 @@
           <img src="imagen4.jpeg" alt="Maqueta del Sol">
           <figcaption> Prototipo de conexion </figcaption>
         </figure>
-
-
       </div>
     </section>
 
@@ -74,19 +121,17 @@
         <li>Resistencia 560ohms</li>
         <li>Transistor 2n2222a </li>
         <li>Sensor lm35 </li>
-
       </ul>
     </section>
   </main>
 
-  <footer id="contacto">
-    <p>📩 Contacto 1: Carlos Vela 20151369@aguascalinetes.tecnm.mx</p>
-    <p>📩 Contacto 2: Antonio Mercado 20151369@aguascalinetes.tecnm.mx</p>
-    <p>📩 Contacto 3: Luis Varela 20151370@aguascalinetes.tecnm.mx</p>
-    <p>📩 Contacto ITA: comunicacion@aguascalientes.tecnm.mx</p>
+  <footer id="contacto" class="contacto">
+    <p>📩 Contacto 1: <a href="mailto:20151369@aguascalinetes.tecnm.mx">Carlos Vela</a></p>
+    <p>📩 Contacto 2: <a href="mailto:20151369@aguascalinetes.tecnm.mx">Antonio Mercado</a></p>
+    <p>📩 Contacto 3: <a href="mailto:20151370@aguascalinetes.tecnm.mx">Luis Varela</a></p>
+    <p>📩 Contacto ITA: <a href="mailto:comunicacion@aguascalientes.tecnm.mx">comunicacion@aguascalientes.tecnm.mx</a></p>
     <p>© 2025 Proyecto Unidad 4 | Curso Industria Inteligente | INSTITUTO TECNOLÓGICO DE AGUASCALIENTES</p>
   </footer>
 
 </body>
 </html>
-

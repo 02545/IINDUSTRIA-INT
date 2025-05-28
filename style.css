@@ -11,7 +11,6 @@ body {
   background-position: center;
 }
 
-
 /* 🔹 Encabezado en línea: imagen + título */
 header.encabezado {
   display: flex;
@@ -34,7 +33,7 @@ header.encabezado {
 /* Contenedor del texto dentro del encabezado */
 header.encabezado h1 {
   margin: 0;
-  font-size: 2.5em;
+  font-size: 5gem;
   color: #00bcd4;
 }
 
@@ -42,9 +41,11 @@ header.encabezado p {
   margin: 10px 0 0;
   color: #e0e0e0;
 }
+
 .texto-encabezado p {
   margin-top: 20px;
 }
+
 /* 🔹 Centrando el menú de navegación */
 nav {
   display: flex;
@@ -59,14 +60,69 @@ nav ul {
   gap: 30px;
 }
 
+/* 🔹 Enlaces con recuadro */
 nav ul li a {
   text-decoration: none;
   color: #4fc3f7;
   font-weight: bold;
-  transition: color 0.3s ease;
+  padding: 10px 20px;
+  border: 2px solid #4fc3f7;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #ffffff;
+  color: white;
+  background-color: #4fc3f7;
+  border-color: white;
+}
+footer.contacto {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #e0e0e0;
+  padding: 20px;
+  text-align: center;
+  border-top: 2px solid #4fc3f7;
+}
+
+footer.contacto a {
+  color: #4fc3f7;
+  text-decoration: none;
+}
+
+footer.contacto a:hover {
+  text-decoration: underline;
+  color: white;
+}
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centra las imágenes horizontalmente */
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.galeria figure {
+  margin: 0;
+  text-align: center; /* Centra el figcaption debajo de la imagen */
+}
+
+.galeria img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+.galeria figcaption {
+  margin-top: 10px;
+  color: #e0e0e0;
+  font-size: 0.9em;
 }
 
